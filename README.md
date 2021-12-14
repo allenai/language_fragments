@@ -4,9 +4,9 @@ Language Fragments
 Repository for storing some of the code and data used in the following paper:
 ```
 @inproceedings{richardson-aaai22,
-  author    = {Richardson, Kyle, Berant, Ashish Sabharwal},
-  title     = {Pushing the Limits of Rule Reasoning in Transformers
-  through Natural Language Satisfiability},
+  author    = {Richardson, Kyle, Ashish Sabharwal},
+  title     = {{P}ushing the {L}imits of {R}ule {R}easoning in {T}ransformers
+  through {N}atural {L}anguage {S}atisfiability},
   booktitle = {to appear at AAAI2022},
   year      = {2022},
   }
