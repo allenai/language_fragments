@@ -3,8 +3,16 @@ Language Fragments
 
 Repository for storing some of the code and data used in the following paper:
 ```
-cituation here
+@inproceedings{richardson-aaai22,
+  author    = {Richardson, Kyle, Berant, Ashish Sabharwal},
+  title     = {Pushing the Limits of Rule Reasoning in Transformers
+  through Natural Language Satisfiability},
+  booktitle = {to appear at AAAI2022},
+  year      = {2022},
+  }
 ```
+See belows below: 
+
 
 Datasets
 ============
@@ -23,6 +31,10 @@ General json schema we use for all datasets:
 "answer" : "true" ##<-- the output
 "meta" { ... } ##<-- additional information about instance 
 ```
+
+Scripts for verifying the correctness of different datasets can be
+found in `etc/data/{check_rc_fragment,check_ruletaker,check_rule_fragments}.py`,
+some of which using the auxiliary solver code described below. 
 
 Solver Code
 ============
