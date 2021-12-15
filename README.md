@@ -147,6 +147,8 @@ implemented:
 |---	|---	|
 | config.parser = 'rule_taker' 	| Implements the RuleTaker language with OWA classical semantics 	|
 | config.parser = 'ground_rule_language' 	| Implements the grounded rule language from the paper 	|
+
+
 The relative clause fragment from the paper does not yet have a full
 implementation, but is partially implemented in the default parser. 
 
