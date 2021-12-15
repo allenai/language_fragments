@@ -1,7 +1,7 @@
 Language Fragments
 ============
 
-Repository for storing some of the code and data used in the following paper:
+(still incomplete) repository for the code and data used in the following paper:
 ```
 @inproceedings{richardson-aaai22,
   author    = {Richardson, Kyle, Ashish Sabharwal},
@@ -11,8 +11,7 @@ Repository for storing some of the code and data used in the following paper:
   year      = {2022},
   }
 ```
-See belows below: 
-
+See details below.
 
 Datasets
 ============
@@ -21,10 +20,17 @@ See `datasets/` for the different datasets, which are described below:
 
 *3SAT datasets* in `data/3sat`
 
-*2SAT datasets* in `data/2sat_pretraining`
+*2SAT datasets* in `data/2sat_pretraining`: this data was used for
+ pre-training before training on the `3SAT` datasets above. 
 
-*RuleTaker datasets* in `data/`
-
+*RuleTaker datasets* in `data/ruletaker_3ext_sat`: a version of the
+ RuleTaker open world assumption (OWA) 3ext dataset available
+ [here](https://allenai.org/data/proofwriter) lightly filtered to
+ exclude some unsat examples and label assignments that differed from
+ those produced by our solvers (< 2\% of the overall
+ dataset). `data/hard_ruletaker/dev.jsonl`: the challenge dataset
+ created using our 3SAT sampling technique and reported in the paper. 
+  
 General json schema we use for all datasets:
 ```json 
 "context"  : If the dog is not red and the dog is not green then the dog is not young. If the dog is red and the dog is round then the dog is not big. If the dog is round and the dog is red then the dog is big. ..." ## <- the input
@@ -38,7 +44,9 @@ some of which using the auxiliary solver code described below.
 
 Solver Code
 ============
-We created various solvers for verifying the correctness of our different datasets, most relying on the [Z3 theorem prover](https://github.com/Z3Prover/z3). To load the necessary dependencies, we recommend using [conda](https://docs.conda.io/en/latest/miniconda.html) and doing the following
+We created various solvers for verifying the correctness of our
+different datasets (and for potentially expanding our fragments to
+include new datasets or reasoning problems), most relying on the [Z3 theorem prover](https://github.com/Z3Prover/z3). To load the necessary dependencies, we recommend using [conda](https://docs.conda.io/en/latest/miniconda.html) and doing the following
 ```
 conda create -n language_fragments python==3.7
 conda activate language_fragments
@@ -131,6 +139,9 @@ This implements some of the *language fragments* investigated in [Pratt-Hartmann
      "If someone sees the cat and they chase the tiger then the cat sees the bald_eagle", 
      "If someone is big and blue then they chase the squirrel"],query="The squirrel is blue")
 ```
+
+
+
 
 Transformer Code
 ============
