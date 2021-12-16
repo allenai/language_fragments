@@ -158,3 +158,6 @@ Transformer Code
 ============
 *forthcoming* 
 
+License
+============
+Apache 2.0, see `LICENSE` in this repo for more details.
