@@ -31,16 +31,17 @@ See `datasets/` for the different datasets, which are described below:
  dataset). `data/hard_ruletaker/dev.jsonl`: the challenge dataset
  created using our 3SAT sampling technique and reported in the paper. 
   
-General json schema we use for all datasets:
-```json 
-"context"  : If the dog is not red and the dog is not green then the dog is not young. If the dog is red and the dog is round then the dog is not big. If the dog is round and the dog is red then the dog is big. ..." ## <- the input
-"answer" : "true" ##<-- the output
+General json schema we use for all datasets (an example from RuleTaker):
+```
+"context"  : If the dog is not red and the dog is not green then the dog is not young. If the dog is red and the dog is round then the dog is not big. If the dog is round and the dog is red then the dog is big. ..." ## <- The theory input
+"answer" : "true" ##<-- the output {true,false,unknown}
 "meta" { ... } ##<-- additional information about instance 
 ```
 
 Scripts for verifying the correctness of different datasets can be
 found in `etc/data/{check_rc_fragment,check_ruletaker,check_rule_fragments}.py`,
-some of which using the auxiliary solver code described below. 
+some of which using the auxiliary solver code described below and shows
+how to do mappings into boolean SAT. 
 
 Solver Code
 ============
@@ -152,8 +153,10 @@ implemented:
 The relative clause fragment from the paper does not yet have a full
 implementation, but is partially implemented in the default parser. 
 
-
 Transformer Code
 ============
-*forthcoming* 
+*forthcoming*
 
+LICENSE
+============
+Apache 2.0. See `LICENSE` included in this repo for details. 
