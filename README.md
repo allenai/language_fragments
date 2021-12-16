@@ -1,7 +1,6 @@
 Language Fragments
 ============
-
-(still incomplete) repository for the code and data used in the following paper:
+Repository for the code and data used in the following paper:
 ```
 @inproceedings{richardson-aaai22,
   author    = {Richardson, Kyle, Ashish Sabharwal},
@@ -18,7 +17,11 @@ Datasets
 
 See `datasets/` for the different datasets, which are described below:
 
-*3SAT datasets* in `data/3sat`
+*3SAT datasets* in `data/3sat`: the main datasets constructed from
+ random 3sat sampling. Due to their large size, download links are
+ included inside `data/3sat/grounded_rule_lang` (the associated files
+ for the grounded rule language in the paper above) and
+ `data/3sat/relative_clause` (the relative clause fragment) at `download.txt`.
 
 *2SAT datasets* in `data/2sat_pretraining`: this data was used for
  pre-training before training on the `3SAT` datasets above. 
