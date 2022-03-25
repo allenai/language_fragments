@@ -9,7 +9,7 @@ USAGE = "python -m language_fragments mode [options]"
 MODES = {}
 
 ## tools 
-MODES["random_syllogistic_sampler"] = "language_fragments.tools.random_syllogistic_theory"
+MODES["random_sat_sampler"]         = "language_fragments.tools.random_sat_nl"
 
 def main(argv):
     """The main execution point 
