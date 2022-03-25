@@ -1,13 +1,12 @@
 Language Fragments
 ============
-
-(still incomplete) repository for the code and data used in the following paper:
+Repository for the code and data used in the following paper:
 ```
 @inproceedings{richardson-aaai22,
   author    = {Richardson, Kyle, Ashish Sabharwal},
   title     = {{P}ushing the {L}imits of {R}ule {R}easoning in {T}ransformers
   through {N}atural {L}anguage {S}atisfiability},
-  booktitle = {to appear at AAAI2022},
+  booktitle = {AAAI2022},
   year      = {2022},
   }
 ```
@@ -18,7 +17,11 @@ Datasets
 
 See `datasets/` for the different datasets, which are described below:
 
-*3SAT datasets* in `data/3sat`
+*3SAT datasets* in `data/3sat`: the main datasets constructed from
+ random 3sat sampling. Due to their large size, download links are
+ included inside `data/3sat/grounded_rule_lang` (the associated files
+ for the grounded rule language in the paper above) and
+ `data/3sat/relative_clause` (the relative clause fragment) at `download.txt`.
 
 *2SAT datasets* in `data/2sat_pretraining`: this data was used for
  pre-training before training on the `3SAT` datasets above. 
@@ -40,8 +43,8 @@ General json schema we use for all datasets (an example from RuleTaker):
 
 Scripts for verifying the correctness of different datasets can be
 found in `etc/data/{check_rc_fragment,check_ruletaker,check_rule_fragments}.py`,
-some of which using the auxiliary solver code described below and shows
-how to do mappings into boolean SAT. 
+some of which using the auxiliary solver code described below and show
+how to do mappings to SAT. 
 
 Solver Code
 ============
@@ -153,10 +156,11 @@ implemented:
 The relative clause fragment from the paper does not yet have a full
 implementation, but is partially implemented in the default parser. 
 
+
 Transformer Code
 ============
-*forthcoming*
+*forthcoming* 
 
-LICENSE
+License
 ============
-Apache 2.0. See `LICENSE` included in this repo for details. 
+Apache 2.0, see `LICENSE` in this repo for more details.
