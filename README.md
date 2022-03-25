@@ -162,7 +162,8 @@ jupyter notebook notebooks
 
 Transformer Code
 ============
-*forthcoming* 
+
+A small library called `transformer_tools` is included here, which provides a wrapper around Huggingface Transformers that can be used to reproducing the T5 expeirments. Please unzip `transformer_tools.zip` and follow instructions inside for installation. See `etc/aaai_scripts` for details on how to run on nlsat data. 
 
 License
 ============
